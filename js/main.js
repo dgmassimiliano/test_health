@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
     banner.style.display = "block";
     revokeBtn.style.display = "none";
   }
+  else{
+     banner.style.display = "none";
+    revokeBtn.style.display = "block";
+  }
 
   acceptBtn?.addEventListener("click", function () {
     localStorage.setItem("cookies-accepted-health", "true");
