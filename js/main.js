@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("cookies-accepted", "true");
     banner.style.display = "none";
   });
-
+alert(currentURL);
   // Galleria foto: gestisce sia "/photo-gallery" che "/photo-gallery/"
   if (currentURL === "/photo-gallery") {
     const modal = new bootstrap.Modal(document.getElementById('imageModal'));
