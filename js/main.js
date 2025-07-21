@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const banner = document.getElementById("cookie-banner");
   const acceptBtn = document.getElementById("accept-cookies");
   const navLinks = document.querySelectorAll('.nav-link');
-  const currentURL = window.location.pathname.replace(/\/$/, '');
+  const currentURL = window.location.pathname;
 
   navLinks.forEach(link => {
-    const linkURL = new URL(link.href).pathname.replace(/\/$/, '');
+    const linkURL = new URL(link.href).pathname;
     if (currentURL === linkURL) {
       link.classList.add('active');
     }
@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //Photo Gallery
-  if(currentURL==="/photo-gallery"){  
-  const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+  if(currentURL.endsWith("/photo-gallery/")){  
+    const modal = new bootstrap.Modal(document.getElementById('imageModal'));
     const modalImage = document.getElementById('modalImage');
     const thumbs = document.querySelectorAll('.gallery-thumb');
 
