@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Gestione banner cookies
-  if (!localStorage.getItem("cookies-accepted")) {
+  if (!localStorage.getItem("cookies-accepted-health")) {
     banner.style.display = "block";
   }
 
   acceptBtn?.addEventListener("click", function () {
-    localStorage.setItem("cookies-accepted", "true");
+    localStorage.setItem("cookies-accepted-health", "true");
     banner.style.display = "none";
   });
 
